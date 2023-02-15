@@ -22,3 +22,4 @@ const initGame =()=>{
 
 changeFoodPosition();
 initGame();
+document.addEventListener("keydown", changeDirection);
