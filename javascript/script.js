@@ -36,14 +36,19 @@ const initGame =()=>{
     let htmlMarkup = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
     if(snakeX === foodX && snakeY === foodY){
         changeFoodPosition();
-        //ajouter un element sur un tableau
-        snakBody.push();
+        //ajouter l' element food(la position) sur un tableau du body
+        snakBody.push([foodX, foodY]);
+        console.log(snakBody);
     }
     
+    snakBody[0] = [snakeX,snakeY];
     //met à jour les variables "velocityX" et "velocityY" en fonction de la touche de direction appuyée,
     snakeX += velocityX;
     snakeY += velocityY;
-    htmlMarkup += `<div class="head" style="grid-area: ${snakeY} / ${snakeX}"></div>`;
+    for(let i = 0; i< snakBody.length; i++){
+         htmlMarkup += `<div class="head" style="grid-area: ${snakBody[i][1]} / ${snakBody[i][0]}"></div>`;
+    }
+   
     playBoard.innerHTML = htmlMarkup;
 }
 
