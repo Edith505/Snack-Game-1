@@ -3,6 +3,7 @@ const playBoard = document.querySelector(".play-board");
 //coordonnées initiales de la nourriture du serpent
 let foodX, foodY;
 let snakeX = 5 , snakeY = 10;
+let snakBody =[];
 let velocityX = 0, velocityY = 0;
 
 /**
@@ -35,6 +36,8 @@ const initGame =()=>{
     let htmlMarkup = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
     if(snakeX === foodX && snakeY === foodY){
         changeFoodPosition();
+        //ajouter un element sur un tableau
+        snakBody.push();
     }
     
     //met à jour les variables "velocityX" et "velocityY" en fonction de la touche de direction appuyée,
