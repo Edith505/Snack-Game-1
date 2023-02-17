@@ -40,7 +40,10 @@ const initGame =()=>{
         snakBody.push([foodX, foodY]);
         console.log(snakBody);
     }
-    
+    for(let i = snakBody.length - 1;i > 0; i--){
+        snakBody[i] = snakBody[i - 1];
+    }
+    //initialisation du position du snack
     snakBody[0] = [snakeX,snakeY];
     //met à jour les variables "velocityX" et "velocityY" en fonction de la touche de direction appuyée,
     snakeX += velocityX;
