@@ -1,3 +1,6 @@
+# 8 site pour developper
+#colors
+#alternativeTo
 # snack game
 
 #step 1: create html body
