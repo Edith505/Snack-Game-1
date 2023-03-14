@@ -18,4 +18,4 @@
 
 #step 5: moov snack with setInterval fonction and change is direction
 
-#step 6: 
+#step 6: debuger
